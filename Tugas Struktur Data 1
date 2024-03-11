@@ -64,3 +64,41 @@ Miexue Ice Cream     : Rp 5.000
 Boba Shake           : Rp 16.000
 Mi Sundae            : Rp 14.000
 Mi Ganas             : Rp 11.000
+Creamy Mango Boba    : Rp 22.000
+====================================
+"""
+keranjang = LinkedList()
+
+while True:
+
+    print("\nMenu Aplikasi:")
+    print("1. Tambah pesanan ke keranjang")
+    print("2. Tampilkan pesanan yang sudah ditambahkan")
+    print("3. Jumlah Harga yang dibayarkan")
+    print("4. Keluar")
+
+    pilihan = input("Masukkan pilihan Anda: ")
+
+    if pilihan == "1":
+        print(menu2)
+        pesanan = input("Masukkan nama menu yang ingin dipesan: ").lower()
+        if pesanan in menu  :
+            keranjang.tambah_pesanan(pesanan, menu[pesanan])
+            print(f"{pesanan} sudah ditambahkan ke keranjang")
+        else:
+            print("Menu tidak tersedia")
+
+    elif pilihan == "2":
+        print("Pesanan yang sudah ditambahkan:")
+        keranjang.tampilkan_pesanan()
+
+    elif pilihan == "3":
+        total = keranjang.total_harga()
+        print(f"Total biaya yang harus dibayarkan adalah {total} rupiah, terimakasih sudah memesan")
+
+    elif pilihan == "4":
+        print("Terima kasih, sampai jumpa!")
+        break
+
+    else:
+        print("Pilihan tidak valid")
