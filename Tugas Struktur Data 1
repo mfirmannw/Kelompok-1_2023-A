@@ -31,3 +31,36 @@ class LinkedList:
                 i += 1
                 
 #Perintah menampilkan pesanan harga makanan
+    def total_harga(self):
+        total = 0
+        current = self.head
+        while current:
+            total += current.harga
+            current = current.next
+        return total
+    
+#opening  
+    print("====================================")
+    print("          SELAMAT DATANG DI         ")
+    print("             D4 MIE&XUE             ")
+    print("====================================")
+
+# Menu Miexue
+menu = {
+    "miexue ice cream": 5000,
+    "boba shake": 16000,
+    "mi sundae": 14000,
+    "mi ganas": 11000,
+    "creamy mango boba": 22000
+    
+}
+
+menu2 = """
+====================================
+       Menu Aplikasi Pemesanan      
+             D4 MIE&XUE             
+====================================
+Miexue Ice Cream     : Rp 5.000 
+Boba Shake           : Rp 16.000
+Mi Sundae            : Rp 14.000
+Mi Ganas             : Rp 11.000
